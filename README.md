@@ -1,7 +1,3 @@
----
-description: 'test: what''s page description?'
----
-
 # System Design
 
 ## TODO
