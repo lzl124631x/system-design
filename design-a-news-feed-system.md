@@ -56,16 +56,67 @@ The return values is a JSON containing a list of news feed items.
 
 ## Database Design
 
-Basic objects:
+### Basic objects
 
 1. User
 2. Entity \(page, group, etc\)
 3. Post
+4. Media
 
-Relationships:
+### Relationships
 
 1. Follower-Followee: A User can follow other Users or Entities.
 2. PostWriter-Post: Users and Entities can generate Posts. For simplicity, assume only Users can generate Posts.
+3. Post-Media: Each Post has some associated Medias.
+
+## High-level Design
+
+### Workflows
+
+#### Feed generation
+
+When Alice ask for her news feed, the system will:
+
+1. Get followees: retrieve the IDs of all the users/entities that Alice follows
+2. Aggregate posts: retrieve latest, most pupular and relevant posts for those IDs.
+3. Rank posts: rank the posts based on relevance.
+4. Cache: cache the feeds generated and return the top 20 posts to Alice
+5. Waterfall flow: When Alices reaches the end of those first 20 posts, another request is sent to fetch the next 20 posts.
+
+Assume Alice follows Bob, and Bod sends a new post. The system will need to update Alice's news feed:
+
+1. Get followers: retrieve the IDs of Bob's followers
+2. Add posts: Add the post Bob created to the news feed pool of those IDs.
+3. Rank posts: 
+4. Update Cache:
+5. Notify followers: 
+
+#### Feed publishing
+
+### Components
+
+1. Web servers: maintains connections with the users.
+2. Application server: executes the workflows mentioned above.
+3. Database and cache:
+   1. User/Entity: relationtional database
+   2. Post: ?
+   3. Media \(image/video\): blob storge
+   4. Metadata: relational database?
+4. Dedicated services:
+   1. Feed generation
+   2. Feed notification
+
+## Detailed Design
+
+### Feed generation
+
+### Feed publishing
+
+## Feed Ranking
+
+## Data Partitioning
+
+
 
 
 
