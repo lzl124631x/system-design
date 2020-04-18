@@ -83,7 +83,7 @@ When Alice ask for her news feed, the system will:
 4. Cache: cache the feeds generated and return the top 20 posts to Alice
 5. Waterfall flow: When Alices reaches the end of those first 20 posts, another request is sent to fetch the next 20 posts.
 
-#### Feed publishing
+#### Feed publishing \(Live updates\)
 
 Assume Alice follows Bob, and Bod sends a new post. The system will need to update Alice's news feed:
 
@@ -114,17 +114,120 @@ Assume Alice follows Bob, and Bod sends a new post. The system will need to upda
 
 ### Feed generation
 
+#### Naive implementation
+
+```text
+SELECT FeedItemID FROM FeedItem WHERE SourceID in
+  (SELECT EntityOrFriendID FROM UserFollow WHERE UserID =<current_user_id>)
+ORDER BY CreationDate DESC
+LIMIT 100
+```
+
+Issues of this naive implementation:
+
+1. Super slow for users with a lot of friends/follows as we have to perform sorting/merging/ranking o a huge number of posts
+2. We generate the timeline when a user loads their page. This could be quite slow and have high latency.
+3. For live updates, each status update will result in feed updates for all followers. This could result in high backlogs in our Newsfeed Generation Service.
+4. ??
+
+To improve the efficiency, we can pre-generate the timeline and store it in a memory.
+
+#### Offline Generation
+
+We can have dedicated servers that are continuously generating users' newsfeed and storing them in memory. Whenever a user requests for the news feed, we can simply serve it from the pre-generated, stored location.
+
+LinkedHashMap?
+
+**How many feed items should we store in memory for a user's feed?**
+
+Adjust on usage pattern.
+
+**Should we generate \(and keep in memory\) newsfeed for all users?**
+
+For users that don't login frequently.
+
+Simple solution: LRU based cache.
+
+Smarter solution: learn the login pattern of users. What time? Which days of week?
+
 ### Feed publishing
+
+The process of pushing a post to all the followers is called a **fanout**.
+
+#### fanout read \(pull\)
+
+When you request for news feed, you creates a read request to the system. With fanout read, the read request is fanned out to all your followees to read their posts.
+
+Pro:
+
+1. The cost of write operation is low.
+
+Con:
+
+1. The read operation is super costly for a user who has lots of followees.
+2. new data can't be shown to the users until they pull.
+3. If we periodically pull to fetch latest posts, it's hard to find the right pull cadence and most of the pull requests will result in an empty response, cauing waste of resources.
+
+This architecture is better for write-intensive application.
+
+#### fanout write \(push\)
+
+When you send a new post, you creates a write request to the system. With fanout write, the write request is fanned out to all your followers to update their newsfeed.
+
+Pro:
+
+1. The cost of read operation is low.
+
+Con:
+
+1. The write operation is super costly for a user who has millions of followers.
+
+This architecture is better for read-intensive application. Take twitter/facebook as example, their `readRate >> writeRate`.
+
+For systems have less latency requirement, we can use this approach as well. For example, WeChat Public Accounts do fanout write and all their followers get notified after some latency ranging from seconds to minutes.
+
+#### Hybrid
+
+Idea 1. For users who has lots of followers, stop fanout write for their new posts. Instead, the followers fanout read the celebrities' updates.
+
+Idea 2. When users send new posts, limit the fanout write to only their online followers.
+
+**How many feed items can we return to the client in each request?**
+
+The backend should have some maximum limit. But it should be configurable by the client so that different client \(mobile vs desktop\) can have different limits.
+
+**Should we always notify users if there are new posts available for their newsfeed?**
+
+For mobile devices where data usage is relatively expensive, "Live Update" should be configurable by the client.
 
 ## Feed Ranking
 
+Instead of simply ranking the feeds chronologically, today's ranking algorithms also try to ensure that posts of higher relevance are ranked higher.
+
+* Select features that can determine the relevance of a feed item, e.g. number of likes, comments, shares, time of update, whether the post has images/videos, etc. 
+* Compute the score based on the features.
+* Rank the posts using the score.
+
+Set up metrics like user stickiness, retention, ads revenue, etc. to determine whether our ranking algorithm are good.
+
 ## Data Partitioning
 
+### Sharding posts and metadata
 
+As we have more users and posts, we need to scale our system by distributing our data onto multiple machines such that we can read/write efficiently.
+
+### Sharding feed data
+
+Since we only store a limited number of feeds in memory, we shouldn't distribute the feed data of one user onto multiple servers.
+
+We can partition the user feed data based on userId. We hash the userId and map the hash to a cache server. We would need to use consistent hashing.
 
 ## Questions
 
 1. is Facebook using SQL or NoSQL? [https://blog.yugabyte.com/facebooks-user-db-is-it-sql-or-nosql/](https://blog.yugabyte.com/facebooks-user-db-is-it-sql-or-nosql/)
+2. How is the pagination implemented if the posts are not sorted chronologically?
+3. live update methods?
+4. Sharding data in designing twitter.
 
 
 
