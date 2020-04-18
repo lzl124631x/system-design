@@ -79,19 +79,19 @@ When Alice ask for her news feed, the system will:
 
 1. Get followees: retrieve the IDs of all the users/entities that Alice follows
 2. Aggregate posts: retrieve latest, most pupular and relevant posts for those IDs.
-3. Rank posts: rank the posts based on relevance.
+3. Rank posts: rank the posts based on relevance and time.
 4. Cache: cache the feeds generated and return the top 20 posts to Alice
 5. Waterfall flow: When Alices reaches the end of those first 20 posts, another request is sent to fetch the next 20 posts.
+
+#### Feed publishing
 
 Assume Alice follows Bob, and Bod sends a new post. The system will need to update Alice's news feed:
 
 1. Get followers: retrieve the IDs of Bob's followers
-2. Add posts: Add the post Bob created to the news feed pool of those IDs.
-3. Rank posts: 
-4. Update Cache:
-5. Notify followers: 
-
-#### Feed publishing
+2. Add posts: Add the post Bob created to the news feed pool of those  follower IDs.
+3. Rank posts: rank the posts based on relevance and time.
+4. Update Cache: update the ranked post into cache
+5. Notify followers: use different mechanisms to let the follower know there are new posts.
 
 ### Components
 
@@ -99,12 +99,16 @@ Assume Alice follows Bob, and Bod sends a new post. The system will need to upda
 2. Application server: executes the workflows mentioned above.
 3. Database and cache:
    1. User/Entity: relationtional database
-   2. Post: ?
+   2. Post: relational database
    3. Media \(image/video\): blob storge
-   4. Metadata: relational database?
+   4. Metadata: relational database
 4. Dedicated services:
    1. Feed generation
    2. Feed notification
+
+### Architecture
+
+![](https://lh6.googleusercontent.com/-uWaQ96vyauzt305pxDy88nAI-jLXaA75q-VW704nkSRvLf1LxRhShbUpUySwFt7emDILFtXn8jxWR4X0B8rLZEo5b2Fr6GQCkhzuH-KdcpN8hp5AmEF_pI7WFpKhj3s4xkAV0dL)
 
 ## Detailed Design
 
@@ -115,6 +119,12 @@ Assume Alice follows Bob, and Bod sends a new post. The system will need to upda
 ## Feed Ranking
 
 ## Data Partitioning
+
+
+
+## Questions
+
+1. is Facebook using SQL or NoSQL? [https://blog.yugabyte.com/facebooks-user-db-is-it-sql-or-nosql/](https://blog.yugabyte.com/facebooks-user-db-is-it-sql-or-nosql/)
 
 
 
