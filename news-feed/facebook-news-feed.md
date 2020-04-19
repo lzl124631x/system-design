@@ -13,7 +13,7 @@ Pro:
 
 **Fanout read = Multifeed**
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 Facebook chose Fanout read \(Multifeed\).
 
@@ -26,7 +26,7 @@ Facebook chose Fanout read \(Multifeed\).
 * Never have huge fan-out write to do, only bounded \(&lt;10k\) fan-out read
   * Justin Bieber problem: with fanout write, when JB sends a new post, we need to write to a million different places. And because facebook's friend relationship is bidirectional, JB's news feed pool will be write a million times if each of his friends sends a new post. But nobody would read one million posts.
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 ## Leaf Nodes
 
@@ -42,11 +42,11 @@ Facebook chose Fanout read \(Multifeed\).
 * Want to have an easy way of adding new activity without locking
 * Most natural data structure is a hashtable to a linked list \(map from userId to posts\)
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%286%29.png)
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 ## Reference
 

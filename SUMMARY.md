@@ -11,4 +11,5 @@
 
 * [Design a News Feed System](news-feed/design-a-news-feed-system.md)
 * [Facebook News Feed](news-feed/facebook-news-feed.md)
+* [Twitter News Feed \(Timeline\)](news-feed/twitter-news-feed-timeline.md)
 
