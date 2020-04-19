@@ -128,15 +128,12 @@ Issues of this naive implementation:
 1. Super slow for users with a lot of friends/follows as we have to perform sorting/merging/ranking o a huge number of posts
 2. We generate the timeline when a user loads their page. This could be quite slow and have high latency.
 3. For live updates, each status update will result in feed updates for all followers. This could result in high backlogs in our Newsfeed Generation Service.
-4. ??
 
 To improve the efficiency, we can pre-generate the timeline and store it in a memory.
 
 #### Offline Generation
 
 We can have dedicated servers that are continuously generating users' newsfeed and storing them in memory. Whenever a user requests for the news feed, we can simply serve it from the pre-generated, stored location.
-
-LinkedHashMap?
 
 **How many feed items should we store in memory for a user's feed?**
 
