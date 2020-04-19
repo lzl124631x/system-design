@@ -67,7 +67,7 @@ The return values is a JSON containing a list of news feed items.
 ### Relationships
 
 1. Follower-Followee: A User can follow other Users or Entities. \(m:n\)
-2. PostWriter-Post: Users and Entities can generate Posts. For simplicity, assume only Users can generate Posts. \(1:1\)
+2. PostWriter-Post: Users and Entities can generate Posts. For simplicity, assume only Users can generate Posts. \(1:1; we can embed the writerId\)
 3. Post-Media: Each Post has some associated Medias. \(1:n\)
 
 ## High-level Design
