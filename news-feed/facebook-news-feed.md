@@ -42,6 +42,8 @@ Facebook chose Fanout read \(Multifeed\).
 * Want to have an easy way of adding new activity without locking
 * Most natural data structure is a hashtable to a linked list \(map from userId to posts\)
 
+## Pipelines
+
 ![](../.gitbook/assets/image%20%284%29.png)
 
 ![](../.gitbook/assets/image%20%286%29.png)
