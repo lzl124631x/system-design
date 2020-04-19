@@ -1,6 +1,6 @@
 # Table of contents
 
-* [System Design](README.md)
+* [Introduction](README.md)
 * [Consistent Hashing](consistent-hashing.md)
 * [Server-to-client Communication](server-to-client-communication.md)
 

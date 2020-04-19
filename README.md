@@ -1,6 +1,6 @@
-# System Design
+# Introduction
 
-{% page-ref page="news-feed/design-a-news-feed-system.md" %}
+I summarize what I learnt about System Design in this gitbook.
 
 
 
