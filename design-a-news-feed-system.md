@@ -91,7 +91,7 @@ Assume Alice follows Bob, and Bod sends a new post. The system will need to upda
 2. Add posts: Add the post Bob created to the news feed pool of those  follower IDs.
 3. Rank posts: rank the posts based on relevance and time.
 4. Update Cache: update the ranked post into cache
-5. Notify followers: use different mechanisms to let the follower know there are new posts.
+5. Notify followers: let the follower know that there are new posts. \(See [Server-to-client Communication](https://liuzhenglaichn.gitbook.io/systemdesign/server-to-client-communication)\)
 
 ### Components
 
@@ -226,8 +226,7 @@ We can partition the user feed data based on userId. We hash the userId and map 
 
 1. is Facebook using SQL or NoSQL? [https://blog.yugabyte.com/facebooks-user-db-is-it-sql-or-nosql/](https://blog.yugabyte.com/facebooks-user-db-is-it-sql-or-nosql/)
 2. How is the pagination implemented if the posts are not sorted chronologically?
-3. live update methods?
-4. Sharding data in designing twitter.
+3. Sharding data in designing twitter.
 
 
 
