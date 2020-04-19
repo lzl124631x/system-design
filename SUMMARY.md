@@ -9,6 +9,7 @@
 * [Design a News Feed System](news-feed/design-a-news-feed-system.md)
 * [Facebook News Feed](news-feed/facebook-news-feed.md)
 * [Twitter News Feed \(Timeline\)](news-feed/twitter-news-feed-timeline.md)
+* [How does facebook rank news feed?](news-feed/how-does-facebook-rank-news-feed.md)
 
 ## TODO <a id="todo-1"></a>
 
