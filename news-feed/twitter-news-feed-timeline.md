@@ -88,6 +88,5 @@ Don't fanout write for users with large number of followers. Only do fan out for
 
 ## Reference
 
-1. Timelines at Scale \(APR 03, 2013\)
-   1. [https://www.infoq.com/presentations/Twitter-Timeline-Scalability/](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/)
+1. Timelines at Scale \(APR 03, 2013\): [https://www.infoq.com/presentations/Twitter-Timeline-Scalability/](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/)
 
