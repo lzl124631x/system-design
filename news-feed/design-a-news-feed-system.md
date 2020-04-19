@@ -224,7 +224,7 @@ As we have more users and posts, we need to scale our system by distributing our
 
 Since we only store a limited number of feeds in memory, we shouldn't distribute the feed data of one user onto multiple servers.
 
-We can partition the user feed data based on userId. We hash the userId and map the hash to a cache server. We would need to use consistent hashing.
+We can partition the user feed data based on userId. We hash the userId and map the hash to a cache server. We would need to use [consistent hashing](https://liuzhenglaichn.gitbook.io/systemdesign/consistent-hashing).
 
 ## Questions
 
