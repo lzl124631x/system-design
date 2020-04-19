@@ -157,7 +157,7 @@ When you request for news feed, you creates a read request to the system. With f
 
 
 
-![Fanout read](../.gitbook/assets/image%20%2822%29.png)
+![Fanout read](../.gitbook/assets/image%20%2824%29.png)
 
 Pro:
 
@@ -176,7 +176,7 @@ This architecture is better for write-intensive application.
 
 When you send a new post, you creates a write request to the system. With fanout write, the write request is fanned out to all your followers to update their newsfeed.
 
-![Fanout write](../.gitbook/assets/image%20%2834%29.png)
+![Fanout write](../.gitbook/assets/image%20%2836%29.png)
 
 Pro:
 

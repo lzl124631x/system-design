@@ -42,7 +42,7 @@ WebSocket isa **computer communication protocol** which provides **full-duplex**
 
 The WebSocket protocol enables interaction between a client and a web server with lesser overheads, providing real-time data transfer from and to the server. WebSockets keeps the connection open, allowing messages to be passed back and forth between the client and the server. In this way, a two-way ongoing conversation can take place between the client and the server.
 
-![](.gitbook/assets/image%20%2832%29.png)
+![](.gitbook/assets/image%20%2834%29.png)
 
 A WebSocket connection flow will look something like this.
 
@@ -52,6 +52,16 @@ A WebSocket connection flow will look something like this.
    2. If the server can not establish the connection then it sends response acknowledging it cannot establish WebSocket connection.
 3. Once the client receives a successful WebSocket connection handshake request, WebSocket connection will be opened. Now, client and servers can start sending data in both directions allowing real-time communication.
 4. The connection will be closed once the server or the client decides to close the connection.
+
+Example:
+
+Client Side:
+
+![](.gitbook/assets/image%20%2811%29.png)
+
+Server Side:
+
+![](.gitbook/assets/image%20%2818%29.png)
 
 Pro:
 
@@ -63,7 +73,7 @@ Con:
 * Since WebSocket isn't really HTTP, some of the IT infrastructure might not work well with WebSocket like load balancer, firewall, etc.
 * WebSockets don’t automatically recover when connections are terminated – this is something you need to implement yourself, and is part of the reason why there are many client-side libraries in existence.
 
-WebSocket is the best solution for a real-time application like chat room.
+WebSocket is the best solution for a real-time applications like chat room.
 
 ## Server-Sent Events
 
