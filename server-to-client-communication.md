@@ -87,6 +87,13 @@ Con:
 
 * Server-Sent events are not supported by all browsers.
 
+Use cases:
+
+* A real-time chart of streaming stock prices
+* Real-time news coverage of an important event \(posting links, tweets, and images\)
+* A live Twitter dashboard wall fed by Twitter’s streaming API
+* A monitor for server statistics like uptime, health, and running processes.
+
 ## Reference
 
 1. [https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1](https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1)
