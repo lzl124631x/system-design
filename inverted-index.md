@@ -1,2 +1,0 @@
-# consistent-hash
-
