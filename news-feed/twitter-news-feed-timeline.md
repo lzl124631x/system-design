@@ -4,13 +4,13 @@
 
 
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image%20%2815%29.png)
 
 Each write is fanned out 3 times for redundancy purpose.
 
 We query the Social Graph Service to fan out the write to all the followers.
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 ![](../.gitbook/assets/image%20%285%29.png)
 
@@ -20,7 +20,7 @@ Every write is consist of:
 2. user ID: the sender's ID
 3. bits: miscellaneous product related bits.
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 max limit: 800 tweets in your timeline
 
@@ -44,13 +44,13 @@ Twitter mainly rank the contents based on:
 2. Like
 3. Reply
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 The home timeline requires O\(n\) write and O\(1\) read
 
 The search timeline requires O\(1\) write and O\(n\) read
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 ## Improve fanout write
 
@@ -70,21 +70,21 @@ Merge home timeline and search timeline.
 
 Don't fanout write for users with large number of followers. Only do fan out for users with small number of followers.
 
-![](../.gitbook/assets/image%20%2818%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
-![](../.gitbook/assets/image%20%2835%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
 
 
 ## Stats
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
-![](../.gitbook/assets/image%20%2832%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2833%29.png)
 
 ## Reference
 

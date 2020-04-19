@@ -155,21 +155,28 @@ The process of pushing a post to all the followers is called a **fanout**.
 
 When you request for news feed, you creates a read request to the system. With fanout read, the read request is fanned out to all your followees to read their posts.
 
+
+
+![Fanout read](../.gitbook/assets/image%20%2822%29.png)
+
 Pro:
 
 1. The cost of write operation is low.
+2. Easier to do different aggregation strategies when reading the data.
 
 Con:
 
 1. The read operation is super costly for a user who has lots of followees.
 2. new data can't be shown to the users until they pull.
-3. If we periodically pull to fetch latest posts, it's hard to find the right pull cadence and most of the pull requests will result in an empty response, cauing waste of resources.
+3. If we periodically pull to fetch latest posts, it's hard to find the right pull cadence and most of the pull requests will result in an empty response, causing waste of resources.
 
 This architecture is better for write-intensive application.
 
 #### fanout write \(push\)
 
 When you send a new post, you creates a write request to the system. With fanout write, the write request is fanned out to all your followers to update their newsfeed.
+
+![Fanout write](../.gitbook/assets/image%20%2834%29.png)
 
 Pro:
 
@@ -179,7 +186,7 @@ Con:
 
 1. The write operation is super costly for a user who has millions of followers.
 
-This architecture is better for read-intensive application. Take twitter/facebook as example, their `readRate >> writeRate`.
+This architecture is better for read-intensive application. Take twitter as example, its `readRate >> writeRate`.
 
 For systems have less latency requirement, we can use this approach as well. For example, WeChat Public Accounts do fanout write and all their followers get notified after some latency ranging from seconds to minutes.
 
