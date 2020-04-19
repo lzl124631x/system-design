@@ -1,5 +1,19 @@
 # How does facebook rank news feed?
 
+## Key moments of Facebook Algorithm
+
+![https://blog.hootsuite.com/facebook-algorithm/](../.gitbook/assets/image%20%2848%29.png)
+
+
+
+## EdgeRank
+
+Stopped since 2011, replaced by Machine Learning with 100K factors.
+
+[https://mashable.com/2013/05/07/facebook-edgerank-infographic/](https://mashable.com/2013/05/07/facebook-edgerank-infographic/)
+
+![](../.gitbook/assets/image%20%2842%29.png)
+
 ## How the New Facebook Algorithm Works
 
 The new Facebook algorithm works by ranking all available posts that can display on a user’s News Feed based on how likely that user will have a **positive reaction**.
@@ -77,4 +91,5 @@ You should tailor your content to promote positive engagement, or what Facebook 
 ## Reference
 
 1. [https://tinuiti.com/blog/paid-social/facebook-algorithm/](https://tinuiti.com/blog/paid-social/facebook-algorithm/)
+2. [https://blog.hootsuite.com/facebook-algorithm/](https://blog.hootsuite.com/facebook-algorithm/)
 

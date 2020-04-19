@@ -38,7 +38,7 @@ And we also hash our servers onto the ring. Suppose we have three servers, A, B 
 
 For each key, we find its correponding server by looking closewise. So "Alice" and "Bob" are mapped to server B, and "Casey" is mapped to server A. Server C is idle.
 
-![](.gitbook/assets/image%20%2840%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
 If we add a new server D, some of the keys that used to map to other servers will map to server D.
 
@@ -56,7 +56,7 @@ To overcome this issue, we hash each server using multiple hash functions to get
 
 For example, if we use 3 hash functions, server A will be mapped to `A0`, `A1` and `A2`.
 
-![](.gitbook/assets/image%20%2842%29.png)
+![](.gitbook/assets/image%20%2844%29.png)
 
 Now "Alice" is mapped to server A via `A1`, "Bod" to server B via `B0`, "Casey" to server C via `C1`.
 
@@ -68,7 +68,7 @@ With these virtual nodes, the keys will be distributed more evenly on different 
 
 Now if we add another server D, only a small portion of the keys will be remapped from other servers to server D. For example, "George" is remapped from server A to server D.
 
-![](.gitbook/assets/image%20%2843%29.png)
+![](.gitbook/assets/image%20%2845%29.png)
 
 If we remove server C, the keys used to map to server C will be remapped to other servers. For example, "Eric" and "David" are remapped to server A, while "Casey" is remapped to server B.
 

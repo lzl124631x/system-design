@@ -72,7 +72,7 @@ Don't fanout write for users with large number of followers. Only do fan out for
 
 ![](../.gitbook/assets/image%20%2822%29.png)
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](../.gitbook/assets/image%20%2846%29.png)
 
 ![](../.gitbook/assets/image%20%2835%29.png)
 
@@ -82,7 +82,7 @@ Don't fanout write for users with large number of followers. Only do fan out for
 
 ![](../.gitbook/assets/image%20%2815%29.png)
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2843%29.png)
 
 ![](../.gitbook/assets/image%20%2837%29.png)
 
