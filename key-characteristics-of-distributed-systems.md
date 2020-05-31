@@ -38,6 +38,8 @@ How to increase reliability:
 
   rates.
 
+Common reliability types: availability, efficiency.
+
 ## Scalability
 
 The ability to cope with increased load.
@@ -50,7 +52,19 @@ Usually it's better to use **percentiles** than **mean**. Example, high percenti
 
 **Service level objectives** \(SLO\) and **service level agreements** \(SLA\) are often default using percentiles.
 
-* Availability
-* Efficiency
-* Manageability
+Scale up = Vertical Scaling = Move to a more powerful machine
+
+Scale out = Horizontal Scaling = Use more machines to distribute the load
+
+## Manageability/Maintainability
+
+Operability: Make it easy for operations teams to keep the system running smoothly.
+
+Simplicity: Make it easy for new engineers to understand the system, by removing as much complexity as possible from the system. \(Note this is not the same as simplicity of the user interface.\)
+
+Evolability: Make it easy for engineers to make changes to the system in the future, adapting it for unanticipated use cases as requirements change. Also known as _extensibility_, _modifiability_, or _plasticity_.
+
+## 
+
+
 
