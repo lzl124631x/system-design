@@ -56,6 +56,8 @@ Scale up = Vertical Scaling = Move to a more powerful machine
 
 Scale out = Horizontal Scaling = Use more machines to distribute the load
 
+![](.gitbook/assets/image%20%2837%29.png)
+
 ## Manageability/Maintainability
 
 Operability: Make it easy for operations teams to keep the system running smoothly.
