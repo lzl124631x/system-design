@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Key Characteristics of Distributed Systems](key-characteristics-of-distributed-systems.md)
+* [The Difference between SLI, SLO, and SLA](the-difference-between-sli-slo-and-sla.md)
 * [Consistent Hashing](consistent-hashing.md)
 * [Server-to-client Communication](server-to-client-communication.md)
 

@@ -42,7 +42,7 @@ WebSocket isa **computer communication protocol** which provides **full-duplex**
 
 The WebSocket protocol enables interaction between a client and a web server with lesser overheads, providing real-time data transfer from and to the server. WebSockets keeps the connection open, allowing messages to be passed back and forth between the client and the server. In this way, a two-way ongoing conversation can take place between the client and the server.
 
-![](.gitbook/assets/image%20%2836%29.png)
+![](.gitbook/assets/image%20%2829%29.png)
 
 A WebSocket connection flow will look something like this.
 
@@ -81,7 +81,7 @@ Unlike WebSockets, Server-Sent Events are a **one-way communication channel** wh
 
 A client subscribes to a “stream” from a server and the server will send messages \(“event-stream”\) to the client until the server or the client closes the stream. It is up to the server to decide when and what to send the client, for instance as soon as data changes.
 
-![](.gitbook/assets/image%20%282%29.png)
+![](.gitbook/assets/image%20%281%29.png)
 
 A flow for server send events will be as follows.
 
