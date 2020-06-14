@@ -40,13 +40,25 @@ How to increase reliability:
 
 Common reliability types: availability, efficiency.
 
+Some common ways to keep reliability / availability:
+
+* **keepalived**: when some server goes down, automatically route traffic to another server. A single **virtual address** exposed to the clients could be mapped to multiple different servers. Can't handle [Split-Brain](https://en.wikipedia.org/wiki/Split-brain_%28computing%29).
+
+![](.gitbook/assets/image%20%2843%29.png)
+
+* redundancy: one master for writing and multiple nodes for reading. Sacrifise consistency.
+
+![](.gitbook/assets/image%20%2841%29.png)
+
+* reduce the traffic: cache, combine read and write
+
 ## Scalability
 
 The ability to cope with increased load.
 
 Define **Load**. Example: how many requests you get per second.
 
-Define **Performance**. Example: the throughput of the system.
+Define **Performance**. Example: the **throughput** of the system, **latency** of read/write requests.
 
 Usually it's better to use **percentiles** than **mean**. Example, high percentiles of response time \(aka. **tail latencies**\). For example, Amazon describes response time requirements for internal services in terms of the 99.9th percentile, even though it only affects 1 in 1,000 requests. This is because the customers with the slowest requests are often those who have the most data on their accounts because they have made many purchases—that is, they’re the most valuable customers.
 
