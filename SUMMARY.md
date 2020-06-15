@@ -1,7 +1,17 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Key Characteristics of Distributed Systems](key-characteristics-of-distributed-systems.md)
+
+## Basics
+
+* [Key Characteristics of Distributed Systems](basics/key-characteristics-of-distributed-systems.md)
+* [Load Balancing](basics/load-balancing.md)
+* [Proxy](basics/proxy.md)
+* [Cache](basics/cache.md)
+* [Sharding or Data Partitioning](basics/sharding-or-data-partitioning.md)
+* [Index](basics/index.md)
+* [Redundancy and Replication](basics/redundancy-and-replication.md)
+* [SQL vs NoSQL](basics/sql-vs-nosql.md)
 * [The Difference between SLI, SLO, and SLA](the-difference-between-sli-slo-and-sla.md)
 * [Consistent Hashing](consistent-hashing.md)
 * [Server-to-client Communication](server-to-client-communication.md)

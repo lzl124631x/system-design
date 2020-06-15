@@ -20,3 +20,7 @@ Remove Duplicate
 
 * MinHash
 
+Gateway
+
+Star Schema vs. Snowflake Schema
+
