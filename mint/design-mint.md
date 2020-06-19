@@ -1,11 +1,5 @@
 # Design Mint
 
-## Question
-
-If there are many components in the system, do I need to define all the APIs between every two component?
-
-
-
 Mint.com is a free, web-based personal financial management service, that allows its users to integrate with financial accounts to automatically extract their data, and manage their personal budget.
 
 Design a system like Mint.
@@ -85,6 +79,8 @@ We can also scale the single web server to a cluster and add load balaner to dis
 * User: userId, authToken
 * UserBank: userId, bank, other user data specific to the bank
 
+I'd use SQL DB for User.
+
 Since the UserBank data might be different across different bank. One solution is that we use different tables for different banks. But even if we do that, a specific bank might change their schema as well. So since the data schema might not be stable, I'd prefer to use NoSQL DB.
 
 ### Relationships
@@ -96,4 +92,8 @@ The relationship between User and UserBank table is connected using userId.
 Assume we have 1M DAU, each of them logs in to the portal once per day, then the average QPS is 1M / 24 / 60 / 60 = 11.6 Q/s. If each request taks 100KB, then it's 1.2MB/s.
 
 Assume we have 50M users in total and each user has 3 banks on average, each of them require 2MB information. Then the total storage is 50M \* 3 \* 2MB = 30TB.
+
+## Reference
+
+* [https://github.com/donnemartin/system-design-primer/tree/master/solutions/system\_design/mint\#design-mintcom](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/mint#design-mintcom)
 
