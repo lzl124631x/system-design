@@ -16,6 +16,11 @@
 * [Consistent Hashing](consistent-hashing.md)
 * [Server-to-client Communication](server-to-client-communication.md)
 
+## Database
+
+* [SQL](database/sql.md)
+* [ACID](database/acid.md)
+
 ## News Feed
 
 * [Design a News Feed System](news-feed/design-a-news-feed-system.md)
