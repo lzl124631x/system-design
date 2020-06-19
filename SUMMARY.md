@@ -6,7 +6,7 @@
 
 * [Key Characteristics of Distributed Systems](basics/key-characteristics-of-distributed-systems.md)
 * [Load Balancing](basics/load-balancing.md)
-* [Proxy and Reverse Proxy](basics/proxy.md)
+* [Reverse Proxy](basics/proxy.md)
 * [Cache](basics/cache.md)
 * [Sharding or Data Partitioning](basics/sharding-or-data-partitioning.md)
 * [Index](basics/index.md)

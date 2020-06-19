@@ -1,8 +1,10 @@
-# Proxy and Reverse Proxy
+# Reverse Proxy
 
 ![](../.gitbook/assets/image%20%2851%29.png)
 
 
+
+Reference: [https://github.com/donnemartin/system-design-primer\#reverse-proxy-web-server](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
 
 A reverse proxy is a web server that centralizes internal services and provides unified interfaces to the public. Requests from clients are forwarded to a server that can fulfill it before the reverse proxy returns the server's response to the client.
 
@@ -37,11 +39,4 @@ Additional benefits include:
 * [NGINX architecture](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
 * [HAProxy architecture guide](http://www.haproxy.org/download/1.2/doc/architecture.txt)
 * [Wikipedia](https://en.wikipedia.org/wiki/Reverse_proxy)
-
-## Benefit of reverse proxy
-
-* Load balancing
-* Hide server from internet. Security.
-
-[https://medium.com/@mohsin061/forward-proxy-and-reverse-proxy-500b9bd4bf8e](https://medium.com/@mohsin061/forward-proxy-and-reverse-proxy-500b9bd4bf8e)
 
