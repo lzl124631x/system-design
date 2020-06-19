@@ -6,12 +6,15 @@ Design a system like Mint.
 
 {% embed url="https://www.pramp.com/challenge/4E4NW7NjbnHQEx1Axo73" %}
 
+The following are just my own answer. Please read [this solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/mint#design-mintcom).
+
 ## Feature Scope
 
 * Connect Mint account with my financial accounts
 * Pull my financial data
   * when I log in
-  * periodically to give me financial suggestions
+  * periodically
+* Give me financial suggestions
 
 ## API Design
 
@@ -92,8 +95,4 @@ The relationship between User and UserBank table is connected using userId.
 Assume we have 1M DAU, each of them logs in to the portal once per day, then the average QPS is 1M / 24 / 60 / 60 = 11.6 Q/s. If each request taks 100KB, then it's 1.2MB/s.
 
 Assume we have 50M users in total and each user has 3 banks on average, each of them require 2MB information. Then the total storage is 50M \* 3 \* 2MB = 30TB.
-
-## Reference
-
-* [https://github.com/donnemartin/system-design-primer/tree/master/solutions/system\_design/mint\#design-mintcom](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/mint#design-mintcom)
 
