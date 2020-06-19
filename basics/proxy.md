@@ -1,6 +1,6 @@
 # Proxy
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 ## Benefit of reverse proxy
 

@@ -5,7 +5,7 @@ Important way to increase scalability:
 * Horizontal Partition: split the data, usually based on column
 * Vertical Partition: 
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](../.gitbook/assets/image%20%2845%29.png)
 
 ## Common problems of Sharding
 

@@ -28,6 +28,10 @@
 * [Twitter News Feed \(Timeline\)](news-feed/twitter-news-feed-timeline.md)
 * [How does facebook rank news feed?](news-feed/how-does-facebook-rank-news-feed.md)
 
+## Mint
+
+* [Design Mint](mint/design-mint.md)
+
 ## TODO <a id="todo-1"></a>
 
 * [TODO](todo-1/todo.md)

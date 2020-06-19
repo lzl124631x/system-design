@@ -1,6 +1,6 @@
 # Load Balancing
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2849%29.png)
 
 * Client to gateway: DNS parse domain to different ip addresses.
 * Gateway to webserver: reverse proxy
