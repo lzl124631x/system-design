@@ -12,6 +12,9 @@
 * [Index](basics/index.md)
 * [Redundancy and Replication](basics/redundancy-and-replication.md)
 * [SQL vs NoSQL](basics/sql-vs-nosql.md)
+
+---
+
 * [The Difference between SLI, SLO, and SLA](the-difference-between-sli-slo-and-sla.md)
 * [Consistent Hashing](consistent-hashing.md)
 * [Server-to-client Communication](server-to-client-communication.md)
