@@ -33,7 +33,7 @@ Con: With one HTTP handshake, the server can send response only once.
 
 ## WebSocket
 
-WebSocket isa **computer communication protocol** which provides **full-duplex** communication channels over **a single TCP connection.**
+WebSocket is a **computer communication protocol** which provides **full-duplex** communication channels over **a single TCP connection.**
 
 * It's different from HTTP but compatible with HTTP.
 * Located at layer 7 in the OSI model and depends on TCP at layer 4.
@@ -53,13 +53,7 @@ A WebSocket connection flow will look something like this.
 3. Once the client receives a successful WebSocket connection handshake request, WebSocket connection will be opened. Now, client and servers can start sending data in both directions allowing real-time communication.
 4. The connection will be closed once the server or the client decides to close the connection.
 
-Example:
 
-Client Side:
-
-![](.gitbook/assets/image%20%2812%29.png)
-
-Server Side:
 
 ![](.gitbook/assets/image%20%2819%29.png)
 
