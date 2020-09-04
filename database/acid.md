@@ -17,9 +17,9 @@ This means that integrity constraints must be maintained so that the database is
 
 Example: 
 
-The total amount before and after the transaction must be maintained.  
-Total **before T** occurs = **500 + 200 = 700**.  
-Total **after T occurs** = **400 + 300 = 700**.
+The total balance of the transferee and transferor before and after the transaction must be maintained.  
+Total **before T** **occurs =** **500 + 200 = 700**.  
+Total **after T occurs** **= 400 + 300 = 700**.
 
 ## Isolation
 
