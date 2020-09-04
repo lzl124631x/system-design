@@ -28,6 +28,7 @@
 ## News Feed
 
 * [Design a News Feed System](news-feed/design-a-news-feed-system.md)
+* [Timeline creation with sharded data](news-feed/timeline-creation-with-sharded-data.md)
 * [Facebook News Feed](news-feed/facebook-news-feed.md)
 * [Twitter News Feed \(Timeline\)](news-feed/twitter-news-feed-timeline.md)
 * [How does facebook rank news feed?](news-feed/how-does-facebook-rank-news-feed.md)
