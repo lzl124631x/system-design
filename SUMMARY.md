@@ -18,6 +18,7 @@
 * [The Difference between SLI, SLO, and SLA](advanced/the-difference-between-sli-slo-and-sla.md)
 * [Consistent Hashing](advanced/consistent-hashing.md)
 * [Server-to-client Communication](advanced/server-to-client-communication.md)
+* [Data Sharding](advanced/data-sharding.md)
 
 ## Database
 
