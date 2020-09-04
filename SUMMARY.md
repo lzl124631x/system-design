@@ -24,6 +24,7 @@
 
 * [SQL](database/sql.md)
 * [ACID](database/acid.md)
+* [Data Partitioning](database/data-partitioning.md)
 
 ## News Feed
 
