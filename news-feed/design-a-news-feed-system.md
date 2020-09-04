@@ -156,9 +156,7 @@ The process of pushing a post to all the followers is called a **fanout**.
 
 When you request for news feed, you creates a read request to the system. With fanout read, the read request is fanned out to all your followees to read their posts.
 
-
-
-![Fanout read](../.gitbook/assets/image%20%2825%29.png)
+![Fanout read](../.gitbook/assets/image%20%2855%29.png)
 
 Pro:
 
