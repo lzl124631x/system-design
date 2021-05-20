@@ -13,20 +13,23 @@
 * [Redundancy and Replication](basics/redundancy-and-replication.md)
 * [SQL vs NoSQL](basics/sql-vs-nosql.md)
 
----
+## Advanced
 
-* [The Difference between SLI, SLO, and SLA](the-difference-between-sli-slo-and-sla.md)
-* [Consistent Hashing](consistent-hashing.md)
-* [Server-to-client Communication](server-to-client-communication.md)
+* [The Difference between SLI, SLO, and SLA](advanced/the-difference-between-sli-slo-and-sla.md)
+* [Consistent Hashing](advanced/consistent-hashing.md)
+* [Server-to-client Communication](advanced/server-to-client-communication.md)
+* [Data Sharding](advanced/data-sharding.md)
 
 ## Database
 
 * [SQL](database/sql.md)
 * [ACID](database/acid.md)
+* [Data Partitioning](database/data-partitioning.md)
 
 ## News Feed
 
 * [Design a News Feed System](news-feed/design-a-news-feed-system.md)
+* [Timeline creation with sharded data](news-feed/timeline-creation-with-sharded-data.md)
 * [Facebook News Feed](news-feed/facebook-news-feed.md)
 * [Twitter News Feed \(Timeline\)](news-feed/twitter-news-feed-timeline.md)
 * [How does facebook rank news feed?](news-feed/how-does-facebook-rank-news-feed.md)

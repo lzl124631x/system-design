@@ -8,8 +8,8 @@ CDN: static content cache, media/binarries
 
 ## Independent cache system
 
-* Redis: complex data structure. Built-in high availability
-* Memcache: simple key-value, high concurrency
+* **Redis**: complex data structure. Built-in high availability
+* **Memcache**: simple key-value, high concurrency
 
 ## Cache writing policy
 
