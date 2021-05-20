@@ -6,7 +6,7 @@ Application server cache: local cache. Example: map, leveldb. High performance b
 
 CDN: static content cache, media/binarries
 
-Independent cache system:
+## Independent cache system
 
 * Redis: complex data structure. Built-in high availability
 * Memcache: simple key-value, high concurrency
@@ -23,3 +23,10 @@ If the cache content is easy to calculate, use write-through, otherwise, write-a
 
 Cache eviction policies: LRU, LFU, FIFO.
 
+## What to Cache
+
+TODO
+
+## Cache Eviction Strategy
+
+TODO
