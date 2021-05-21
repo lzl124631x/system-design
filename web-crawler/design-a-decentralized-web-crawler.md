@@ -14,5 +14,8 @@ After a node crawls a page, it will get a list of URLs to crawl next.
 
 The brute force solution would be that this node communicates with all other nodes to see what are the links that haven't been crawled.
 
-A better solution would be that a node use **Consistent Hashing** to determine which node should handle that URL and send the URL to that node. In this way, each node becomes a task assigner, and the communication between nodes are minimized. When a new node is added to the system, some links \(old or new\) will get migrated to the new node. When a node becomes offline, the links assigned to this node will get shared across other nodes.
+A better solution would be that a node use **Consistent Hashing** to determine which node should handle that URL and send the URL to that node. In this way, each node becomes a task assigner, and the communication between nodes are minimized.
+
+* When a new node is added to the system, a small fraction of links \(crawled or not\) that were or will be crawled in an old node will get migrated to the new node. 
+* When a node becomes offline, the links assigned to this node will be shared across other nodes.
 
