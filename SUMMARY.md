@@ -41,6 +41,7 @@
 ## Web Crawler
 
 * [Design a web crawler](web-crawler/design-a-web-crawler.md)
+* [Design a decentralized web crawler](web-crawler/design-a-decentralized-web-crawler.md)
 
 ## TODO <a id="todo-1"></a>
 
