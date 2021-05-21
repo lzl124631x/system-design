@@ -12,7 +12,7 @@ Stopped since 2011, replaced by Machine Learning with 100K factors.
 
 [https://mashable.com/2013/05/07/facebook-edgerank-infographic/](https://mashable.com/2013/05/07/facebook-edgerank-infographic/)
 
-![](../.gitbook/assets/image%20%2842%29.png)
+![](../.gitbook/assets/image%20%2842%29%20%281%29.png)
 
 ## How the New Facebook Algorithm Works
 
@@ -35,7 +35,7 @@ The new Facebook algorithm works by prioritizing content posted from friends ove
 
 Since the [data controversy](https://tinuiti.com/blog/2018/03/facebook-messenger-apps-under-review-following-cambridge-analytica-data-disaster/) erupted around the social network in late 2017, Facebook has worked to improve transparency around how it ranks content on the News Feed.
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
 Between Facebook’s F8 [conferences](https://tinuiti.com/blog/2018/05/facebook-f8-2018/), News Feed [webinars](https://www.forbes.com/sites/paularmstrongtech/2018/02/03/what-you-should-know-from-facebooks-private-newsfeed-webinar/#181acac3452d), and algorithm [presentations](https://www.youtube.com/watch?v=94s0yYECeR8) — we can now say that Facebook’s new algorithm is no longer a complete black box.
 

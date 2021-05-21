@@ -4,9 +4,10 @@ I summarize what I learnt about System Design in this gitbook.
 
 * Gitbook: [https://liuzhenglaichn.gitbook.io/systemdesign/](https://liuzhenglaichn.gitbook.io/systemdesign/)
 * Github Repo: [https://github.com/lzl124631x/system-design](https://github.com/lzl124631x/system-design)
-  
+
 Reference:
-* https://github.com/donnemartin/system-design-primer
+
+* [https://github.com/donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)
 
 ## Topics
 
@@ -24,16 +25,18 @@ Reference:
 * [Scalability article](https://www.lecloud.net/tagged/scalability/chrono)
   * Load Balancer + Clones:
     * Purpose: More concurrent requests.
-    * HowTo: Stateless Server. Centralized data store for session data (external DB or external persistent cache)
+    * HowTo: Stateless Server. Centralized data store for session data \(external DB or external persistent cache\)
   * Database scaling:
     * Purpose: Resolve the query slowness caused by too many data.
-    * HowTo: Sharding / Denormalization (include no more joins in any database query).
+    * HowTo: Sharding / Denormalization \(include no more joins in any database query\).
   * Cache:
     * Purpose: Improve read performance.
     * HowTo: in-memory cache like Memcached or Redis.
     * Patterns:
       1. Cached Database Queries. A hashed version of query is the cache key.  
-      Issue: Expiration. When one piece of data changes, you need to delete all cached queries which may include that data.
+
+         Issue: Expiration. When one piece of data changes, you need to delete all cached queries which may include that data.
+
       2. Cached Objects. 
   * Asynchronism:
     * Purpose: don't have to wait and occupy resource.
@@ -61,3 +64,4 @@ Generally, you should aim for maximal throughput with acceptable latency.
 ## Availability vs consistency
 
 ### CAP theorem
+

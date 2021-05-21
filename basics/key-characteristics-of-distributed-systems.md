@@ -44,7 +44,7 @@ Some common ways to keep reliability / availability:
 
 * **keepalived**: when some server goes down, automatically route traffic to another server. A single **virtual address** exposed to the clients could be mapped to multiple different servers. Can't handle [Split-Brain](https://en.wikipedia.org/wiki/Split-brain_%28computing%29).
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
 * redundancy: one master for writing and multiple nodes for reading. Sacrifise consistency.
 

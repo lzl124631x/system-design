@@ -38,6 +38,10 @@
 
 * [Design Mint](mint/design-mint.md)
 
+## Web Crawler
+
+* [Design a web crawler](web-crawler/design-a-web-crawler.md)
+
 ## TODO <a id="todo-1"></a>
 
 * [TODO](todo-1/todo.md)

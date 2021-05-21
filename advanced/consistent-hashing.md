@@ -42,7 +42,7 @@ For each key, we find its correponding server by looking closewise. So "Alice" a
 
 If we add a new server D, some of the keys that used to map to other servers will map to server D.
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2836%29%20%281%29.png)
 
 If we remove server B, the keys used to map to server B will map to another server.
 
