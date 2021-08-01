@@ -13,6 +13,10 @@ Pro:
 * just one thing to read
 * we can do pre-rank.
 
+Con:
+
+* If you have N friends, your post will be repeatedly wrote N times. It's time and space comsuming.
+
 **Fanout read = Multifeed**
 
 ![](../.gitbook/assets/image%20%2811%29.png)
