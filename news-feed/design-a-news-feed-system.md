@@ -57,17 +57,17 @@ The return values is a JSON containing a list of news feed items.
 
 ## Database Design
 
-### Basic objects
+### Entities
 
 1. User
-2. Entity \(page, group, etc\)
-3. Post
-4. Media
+2. Entity \(page, group, etc\): entityId, name, description, timestamp
+3. Post: postId, title, text, authorId, timestamp
+4. Media: mediaId, url, timestamp
 
 ### Relationships
 
 1. Follower-Followee: A User can follow other Users or Entities. \(m:n\)
-2. PostWriter-Post: Users and Entities can generate Posts. For simplicity, assume only Users can generate Posts. \(1:1; we can embed the writerId\)
+2. Author-Post: Users and Entities can generate Posts. For simplicity, assume only Users can generate Posts. \(1:n; we can embed the authorId\)
 3. Post-Media: Each Post has some associated Medias. \(1:n\)
 
 ## High-level Design
@@ -115,7 +115,7 @@ Assume Alice follows Bob, and Bod sends a new post. The system will need to upda
 
 ### Feed generation
 
-#### Naive implementation
+#### Naive implementation \(Fan-out read\)
 
 ```text
 SELECT FeedItemID FROM FeedItem WHERE SourceID in
@@ -132,7 +132,7 @@ Issues of this naive implementation:
 
 To improve the efficiency, we can pre-generate the timeline and store it in a memory.
 
-#### Offline Generation
+#### Offline Generation \(Fan-out write\)
 
 We can have dedicated servers that are continuously generating users' newsfeed and storing them in memory. Whenever a user requests for the news feed, we can simply serve it from the pre-generated, stored location.
 
