@@ -62,4 +62,5 @@ Facebook chose Fanout read \(Multifeed\).
    1. Video: [https://www.infoq.com/presentations/Scale-at-Facebook/](https://www.infoq.com/presentations/Scale-at-Facebook/)
 3. Scalling Memcache at Facebook
    1. [https://www.usenix.org/sites/default/files/conference/protected-files/nishtala\_nsdi13\_slides.pdf](https://www.usenix.org/sites/default/files/conference/protected-files/nishtala_nsdi13_slides.pdf)
+4. [Serving Facebook Multifeed: Efficiency, performance gains through redesign](https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/)
 
