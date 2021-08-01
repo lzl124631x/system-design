@@ -56,6 +56,10 @@ Facebook chose Fanout read \(Multifeed\).
 
 ![](../.gitbook/assets/image%20%2824%29%20%281%29%20%281%29.png)
 
+## Question
+
+* If FB is using fanout read for news feed generation, how does it handle new posts?
+
 ## Reference
 
 1. Facebook News Feed: Social Data at Scale \(NOV 26, 2012\)
