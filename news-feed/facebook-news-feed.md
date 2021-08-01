@@ -1,5 +1,7 @@
 # Facebook News Feed
 
+Facebook Timeline: Fanout read
+
 ## Fanout method
 
 **Fanout write = Megafeed**

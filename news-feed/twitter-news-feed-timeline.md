@@ -1,5 +1,8 @@
 # Twitter News Feed \(Timeline\)
 
+* Home timeline: fan-out write
+* Search: fan-out read
+
 ## Home Timeline
 
 
