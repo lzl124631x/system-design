@@ -5,7 +5,7 @@ Important way to increase scalability:
 * Horizontal Partition: split the same table across multiple servers, usually based on column
 * Vertical Partition: store different tables in different servers.
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](<../.gitbook/assets/image (31).png>)
 
 ## Common problems of Sharding
 
@@ -16,6 +16,4 @@ Important way to increase scalability:
 ### Rebalancing
 
 Data skew.
-
-
 

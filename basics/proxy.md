@@ -1,10 +1,10 @@
 # Reverse Proxy
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](<../.gitbook/assets/image (24).png>)
 
 
 
-Reference: [https://github.com/donnemartin/system-design-primer\#reverse-proxy-web-server](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
+Reference: [https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server](https://github.com/donnemartin/system-design-primer#reverse-proxy-web-server)
 
 A reverse proxy is a web server that centralizes internal services and provides unified interfaces to the public. Requests from clients are forwarded to a server that can fulfill it before the reverse proxy returns the server's response to the client.
 
@@ -28,15 +28,14 @@ Additional benefits include:
 * Reverse proxies can be useful even with just one web server or application server, opening up the benefits described in the previous section.
 * Solutions such as NGINX and HAProxy can support both layer 7 reverse proxying and load balancing.
 
-#### Disadvantage\(s\): reverse proxy
+#### Disadvantage(s): reverse proxy
 
 * Introducing a reverse proxy results in increased complexity.
-* A single reverse proxy is a single point of failure, configuring multiple reverse proxies \(ie a [failover](https://en.wikipedia.org/wiki/Failover)\) further increases complexity.
+* A single reverse proxy is a single point of failure, configuring multiple reverse proxies (ie a [failover](https://en.wikipedia.org/wiki/Failover)) further increases complexity.
 
-#### Source\(s\) and further reading
+#### Source(s) and further reading
 
 * [Reverse proxy vs load balancer](https://www.nginx.com/resources/glossary/reverse-proxy-vs-load-balancer/)
 * [NGINX architecture](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
 * [HAProxy architecture guide](http://www.haproxy.org/download/1.2/doc/architecture.txt)
-* [Wikipedia](https://en.wikipedia.org/wiki/Reverse_proxy)
-
+* [Wikipedia](https://en.wikipedia.org/wiki/Reverse\_proxy)

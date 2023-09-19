@@ -1,4 +1,4 @@
-# Twitter News Feed \(Timeline\)
+# Twitter News Feed (Timeline)
 
 * Home timeline: fan-out write
 * Search: fan-out read
@@ -7,15 +7,15 @@
 
 
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](<../.gitbook/assets/image (46).png>)
 
 Each write is fanned out 3 times for redundancy purpose.
 
 We query the Social Graph Service to fan out the write to all the followers.
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](<../.gitbook/assets/image (8).png>)
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](<../.gitbook/assets/image (14).png>)
 
 Every write is consist of:
 
@@ -23,13 +23,13 @@ Every write is consist of:
 2. user ID: the sender's ID
 3. bits: miscellaneous product related bits.
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](<../.gitbook/assets/image (39).png>)
 
 max limit: 800 tweets in your timeline
 
-If you are not a active user \(logged in in the last 30 days\), we don't fan out write into your timeline.
+If you are not a active user (logged in in the last 30 days), we don't fan out write into your timeline.
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](<../.gitbook/assets/image (23).png>)
 
 If your cache is empty, we will reconstruct your timeline.
 
@@ -37,7 +37,7 @@ If your cache is empty, we will reconstruct your timeline.
 
 ## Search
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](<../.gitbook/assets/image (44).png>)
 
 Earlybird is a modified version of Lucene.
 
@@ -47,13 +47,13 @@ Twitter mainly rank the contents based on:
 2. Like
 3. Reply
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](<../.gitbook/assets/image (22).png>)
 
-The home timeline requires O\(n\) write and O\(1\) read
+The home timeline requires O(n) write and O(1) read
 
-The search timeline requires O\(1\) write and O\(n\) read
+The search timeline requires O(1) write and O(n) read
 
-![](../.gitbook/assets/image%20%2827%29%20%281%29.png)
+![](<../.gitbook/assets/image (27).png>)
 
 ## Improve fanout write
 
@@ -67,29 +67,28 @@ Race condition:
 
 Merge home timeline and search timeline.
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](<../.gitbook/assets/image (52).png>)
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](<../.gitbook/assets/image (17).png>)
 
 Don't fanout write for users with large number of followers. Only do fan out for users with small number of followers.
 
-![](../.gitbook/assets/image%20%2818%29.png)
+![](<../.gitbook/assets/image (6).png>)
 
-![](../.gitbook/assets/image%20%2835%29.png)
+![](<../.gitbook/assets/image (26).png>)
 
-![](../.gitbook/assets/image%20%2828%29%20%282%29.png)
+![](<../.gitbook/assets/image (16).png>)
 
 
 
 ## Stats
 
-![](../.gitbook/assets/image%20%2812%29%20%281%29.png)
+![](<../.gitbook/assets/image (12) (1).png>)
 
-![](../.gitbook/assets/image%20%2832%29.png)
+![](<../.gitbook/assets/image (21).png>)
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](<../.gitbook/assets/image (37).png>)
 
 ## Reference
 
-1. Timelines at Scale \(APR 03, 2013\): [https://www.infoq.com/presentations/Twitter-Timeline-Scalability/](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/)
-
+1. Timelines at Scale (APR 03, 2013): [https://www.infoq.com/presentations/Twitter-Timeline-Scalability/](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/)

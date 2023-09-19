@@ -4,9 +4,9 @@ It's not uncommon that we want our client to proactively get the latest data fro
 
 A few ways to implement these:
 
-* Short/Long Polling \(client pull\)
-* WebSockets \(server push\)
-* Server-Sent Events \(server push\)
+* Short/Long Polling (client pull)
+* WebSockets (server push)
+* Server-Sent Events (server push)
 
 ## Short Polling
 
@@ -37,12 +37,12 @@ WebSocket is a **computer communication protocol** which provides **full-duplex*
 
 * It's different from HTTP but compatible with HTTP.
 * Located at layer 7 in the OSI model and depends on TCP at layer 4.
-* Works over port 80 and 443 \( in case of TLS encrypted\) and supports HTTP proxies and intermediaries.
+* Works over port 80 and 443 ( in case of TLS encrypted) and supports HTTP proxies and intermediaries.
 * To achieve compatibility, the WebSocket handshake uses _Upgrade_ header to update the protocol to the WebSocket protocol.
 
 The WebSocket protocol enables interaction between a client and a web server with lesser overheads, providing real-time data transfer from and to the server. WebSockets keeps the connection open, allowing messages to be passed back and forth between the client and the server. In this way, a two-way ongoing conversation can take place between the client and the server.
 
-![](../.gitbook/assets/image%20%2829%29.png)
+![](<../.gitbook/assets/image (29).png>)
 
 A WebSocket connection flow will look something like this.
 
@@ -55,7 +55,7 @@ A WebSocket connection flow will look something like this.
 
 
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](<../.gitbook/assets/image (32).png>)
 
 Pro:
 
@@ -73,9 +73,9 @@ WebSocket is the best solution for a real-time applications like chat room.
 
 Unlike WebSockets, Server-Sent Events are a **one-way communication channel** where events flow from **server to client only**. Server-Sent Events allows browser clients to receive a stream of events from a server over an HTTP connection without polling.
 
-A client subscribes to a “stream” from a server and the server will send messages \(“event-stream”\) to the client until the server or the client closes the stream. It is up to the server to decide when and what to send the client, for instance as soon as data changes.
+A client subscribes to a “stream” from a server and the server will send messages (“event-stream”) to the client until the server or the client closes the stream. It is up to the server to decide when and what to send the client, for instance as soon as data changes.
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](<../.gitbook/assets/image (43).png>)
 
 A flow for server send events will be as follows.
 
@@ -85,7 +85,7 @@ A flow for server send events will be as follows.
 
 Pro:
 
-* As SSE is based on HTTP, it is more compliant with existing IT infrastructure like \(Load Balancer, Firewall, etc\), unlike WebSockets which can be blocked by some firewall.
+* As SSE is based on HTTP, it is more compliant with existing IT infrastructure like (Load Balancer, Firewall, etc), unlike WebSockets which can be blocked by some firewall.
 
 Con:
 
@@ -94,7 +94,7 @@ Con:
 Use cases:
 
 * A real-time chart of streaming stock prices
-* Real-time news coverage of an important event \(posting links, tweets, and images\)
+* Real-time news coverage of an important event (posting links, tweets, and images)
 * A live Twitter dashboard wall fed by Twitter’s streaming API
 * A monitor for server statistics like uptime, health, and running processes.
 
@@ -102,6 +102,4 @@ Use cases:
 
 1. [https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1](https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1)
 2. [https://www.ably.io/blog/websockets-vs-long-polling/](https://www.ably.io/blog/websockets-vs-long-polling/)
-
-
 

@@ -6,7 +6,7 @@ Design a system like Mint.
 
 {% embed url="https://www.pramp.com/challenge/4E4NW7NjbnHQEx1Axo73" %}
 
-The following are just my own answer. Please read [this solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system_design/mint#design-mintcom).
+The following are just my own answer. Please read [this solution](https://github.com/donnemartin/system-design-primer/tree/master/solutions/system\_design/mint#design-mintcom).
 
 ## Feature Scope
 
@@ -18,7 +18,7 @@ The following are just my own answer. Please read [this solution](https://github
 
 ## API Design
 
-```text
+```
 syncUserData(userId, back?)
 ```
 
@@ -26,13 +26,13 @@ userId: GUID of user
 
 bank?: If not provided, sync all my bank info; otherwise, just sync the info of this bank.
 
-```text
+```
 getSuggestions(userId)
 ```
 
 Given userId, give a list of suggestions. Example
 
-```text
+```
 [
     { bank: "Chase", suggestions: ["Pay loan on time"] },
     { bank: "Bank of America", suggestions: ["Use less than 10% of credit card limit"] }
@@ -43,7 +43,7 @@ Given userId, give a list of suggestions. Example
 
 ### Basic Setup
 
-![](../.gitbook/assets/image%20%2852%29.png)
+![](<../.gitbook/assets/image (10).png>)
 
 ### Scaling
 
@@ -53,9 +53,9 @@ As we get more and more users, the throughput of the system might not be the fir
 
 We can horizontally scale the DBs.
 
-We can use Consistent Hashing to map the userId to a specific DB instance. When we add or remove DB instance, we just migrate a fraction of the user data to other DB instances. 
+We can use Consistent Hashing to map the userId to a specific DB instance. When we add or remove DB instance, we just migrate a fraction of the user data to other DB instances.&#x20;
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](<../.gitbook/assets/image (12).png>)
 
 #### Application Server
 
@@ -63,7 +63,7 @@ If the user base continues growing, a single application server can't handle all
 
 We can add a load balancer to distribute the load across multiple application servers.
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](<../.gitbook/assets/image (53).png>)
 
 #### Web Server
 
@@ -73,7 +73,7 @@ We can introduce CDN to improve the availability and performance of the static c
 
 We can also scale the single web server to a cluster and add load balaner to distribute the requests.
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](<../.gitbook/assets/image (33).png>)
 
 ## Database Design
 
@@ -95,4 +95,3 @@ The relationship between User and UserBank table is connected using userId.
 Assume we have 1M DAU, each of them logs in to the portal once per day, then the average QPS is 1M / 24 / 60 / 60 = 11.6 Q/s. If each request taks 100KB, then it's 1.2MB/s.
 
 Assume we have 50M users in total and each user has 3 banks on average, each of them require 2MB information. Then the total storage is 50M \* 3 \* 2MB = 30TB.
-

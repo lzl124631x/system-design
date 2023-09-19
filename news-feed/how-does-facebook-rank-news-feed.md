@@ -2,7 +2,7 @@
 
 ## Key moments of Facebook Algorithm
 
-![https://blog.hootsuite.com/facebook-algorithm/](../.gitbook/assets/image%20%2848%29.png)
+![https://blog.hootsuite.com/facebook-algorithm/](<../.gitbook/assets/image (45).png>)
 
 
 
@@ -12,7 +12,7 @@ Stopped since 2011, replaced by Machine Learning with 100K factors.
 
 [https://mashable.com/2013/05/07/facebook-edgerank-infographic/](https://mashable.com/2013/05/07/facebook-edgerank-infographic/)
 
-![](../.gitbook/assets/image%20%2842%29%20%281%29.png)
+![](<../.gitbook/assets/image (51).png>)
 
 ## How the New Facebook Algorithm Works
 
@@ -25,9 +25,9 @@ Facebook’s algorithm for ranking and displaying content on your News Feed is b
 3. **Predictions** on how you will react to each post.
 4. A **Final Score** assigned to the content based on all factors considered.
 
-The process is based on the [Vickrey-Clarke-Groves algorithm](https://en.wikipedia.org/wiki/Vickrey%E2%80%93Clarke%E2%80%93Groves_auction), which “operates as a [closed auction](https://medium.com/@freeformers_uk/digital-uncovered-4-facebook-ad-auctions-c5a8a58f7a42),” in which advertisers’ bids are kept hidden from one another, prompting them to bid their real value.
+The process is based on the [Vickrey-Clarke-Groves algorithm](https://en.wikipedia.org/wiki/Vickrey%E2%80%93Clarke%E2%80%93Groves\_auction), which “operates as a [closed auction](https://medium.com/@freeformers\_uk/digital-uncovered-4-facebook-ad-auctions-c5a8a58f7a42),” in which advertisers’ bids are kept hidden from one another, prompting them to bid their real value.
 
-![](../.gitbook/assets/image%20%2839%29.png)
+![](<../.gitbook/assets/image (47).png>)
 
 ## The New Facebook Algorithm
 
@@ -35,7 +35,7 @@ The new Facebook algorithm works by prioritizing content posted from friends ove
 
 Since the [data controversy](https://tinuiti.com/blog/2018/03/facebook-messenger-apps-under-review-following-cambridge-analytica-data-disaster/) erupted around the social network in late 2017, Facebook has worked to improve transparency around how it ranks content on the News Feed.
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](<../.gitbook/assets/image (36) (1).png>)
 
 Between Facebook’s F8 [conferences](https://tinuiti.com/blog/2018/05/facebook-f8-2018/), News Feed [webinars](https://www.forbes.com/sites/paularmstrongtech/2018/02/03/what-you-should-know-from-facebooks-private-newsfeed-webinar/#181acac3452d), and algorithm [presentations](https://www.youtube.com/watch?v=94s0yYECeR8) — we can now say that Facebook’s new algorithm is no longer a complete black box.
 
@@ -45,7 +45,7 @@ Facebook went public with changes to the algorithm in their post “Meaningful I
 
 The goal of Facebook’s algorithm is to “show stories that matter to users,” according to Adam Mosseri, VP of Facebook’s News Feed Management. With that in mind, you should know how Facebook’s different algorithm factors work together to determine which stories “matter” to a user.
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](<../.gitbook/assets/image (40).png>)
 
 ### Inventory
 
@@ -92,4 +92,3 @@ You should tailor your content to promote positive engagement, or what Facebook 
 
 1. [https://tinuiti.com/blog/paid-social/facebook-algorithm/](https://tinuiti.com/blog/paid-social/facebook-algorithm/)
 2. [https://blog.hootsuite.com/facebook-algorithm/](https://blog.hootsuite.com/facebook-algorithm/)
-
